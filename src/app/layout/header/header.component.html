@@ -1,0 +1,20 @@
+<header class="header">
+  <div class="header-container">
+    <div class="header-content">
+      <div class="header-logo">
+        <h1>FinanceHub</h1>
+      </div>
+      <nav class="header-nav">
+        <ul class="nav-list">
+          @for (item of navItems; track item.route) {
+          <li>
+            <a (click)="navigateTo(item.route)" class="nav-link" role="link">
+              {{ item.label }}
+            </a>
+          </li>
+          }
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

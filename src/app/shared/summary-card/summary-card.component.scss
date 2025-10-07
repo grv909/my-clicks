@@ -1,0 +1,56 @@
+.summary-card {
+  background: rgba(38, 40, 40, 1);
+  border-radius: 12px;
+  border: 1px solid rgba(119, 124, 124, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04),
+      0 2px 4px -1px rgba(0, 0, 0, 0.02);
+    transform: translateY(-2px);
+  }
+
+  .summary-icon {
+    font-size: 24px;
+    background: inherit;
+  }
+
+  .value {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgba(245, 245, 245, 1);
+    margin-bottom: 4px;
+  }
+  .change {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .change.positive {
+    color: rgba(50, 184, 198, 1);
+  }
+
+  .change.negative {
+    color: red;
+  }
+
+  .summary-content {
+    background: inherit;
+    h3,
+    p,
+    span {
+      background: inherit;
+    }
+  }
+  .summary-content h3 {
+    font-size: 12px;
+    color: rgba(98, 108, 113, 1);
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+}

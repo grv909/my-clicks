@@ -1,0 +1,14 @@
+<div class="summary-card">
+  <div class="summary-icon">{{ data.icon }}</div>
+  <div class="summary-content">
+    <h3>{{ data.title }}</h3>
+    <p class="value">{{ data.value }}</p>
+    <span
+      class="change"
+      [class.positive]="data.change.isPositive"
+      [class.negative]="!data.change.isPositive"
+      >{{ data.change.isPositive ? "+" : "-"
+      }}{{ data.change.percentage }}</span
+    >
+  </div>
+</div>

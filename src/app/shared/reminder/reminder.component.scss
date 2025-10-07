@@ -1,0 +1,28 @@
+.reminder-item {
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 4px solid rgba(50, 184, 198, 1);
+  background: rgba(119, 124, 124, 0.15);
+
+  p {
+    margin: 0;
+    font-size: 12px;
+  }
+  small {
+    color: rgba(245, 245, 245, 1);
+
+    line-height: 1.5;
+  }
+}
+
+.reminder-item.high {
+  border-left-color: rgba(192, 21, 47, 1);
+}
+
+.reminder-item.medium {
+  border-left-color: rgba(168, 75, 47, 1);
+}
+
+.reminder-item.low {
+  border-left-color: rgba(98, 108, 113, 1);
+}

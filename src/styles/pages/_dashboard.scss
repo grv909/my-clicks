@@ -1,0 +1,50 @@
+@use "../abstracts/variable" as vars;
+
+.page-header {
+  margin-bottom: vars.$spacing-lg;
+}
+
+.page-subtitle {
+  color: vars.$color-page-subtitle;
+  margin-top: vars.$spacing-xs;
+}
+
+/* Dashboard specific styles */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: vars.$spacing-sm;
+  margin-bottom: vars.$spacing-lg;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: vars.$spacing-md;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: vars.$spacing-xs vars.$spacing-md;
+  border-radius: 8px;
+  font-size: vars.$font-size-btn;
+  font-weight: vars.$font-weight-btn;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  border: none;
+  text-decoration: none;
+  position: relative;
+}
+
+.btn--outline {
+  background: transparent;
+  border: 1px solid vars.$color-btn-outline-border;
+  color: vars.$color-btn-outline-text;
+}
+
+.btn--outline:hover {
+  background: vars.$color-btn-outline-hover-bg;
+}

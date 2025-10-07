@@ -1,0 +1,27 @@
+<div class="transaction-item">
+  @if(mode==='account'){
+  <div class="info">
+    <h4>{{ account.accountName }}</h4>
+    <p>{{ account.accountNumber }} • {{ account.accountType }}</p>
+  </div>
+  <div
+    class="acc-balance"
+    [class.positive]="account.balance >= 0"
+    [class.negative]="account.balance < 0"
+  >
+    {{ account.balance }}
+  </div>
+  } @if(mode==='transaction'){
+  <div class="info">
+    <h4>{{ transaction.merchant }}</h4>
+    <p>{{ transaction.category }} • {{ transaction.date }}</p>
+  </div>
+  <div
+    class="acc-balance"
+    [class.positive]="transaction.amount >= 0"
+    [class.negative]="transaction.amount < 0"
+  >
+    {{ transaction.amount }}
+  </div>
+  }
+</div>

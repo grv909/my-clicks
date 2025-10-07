@@ -1,0 +1,11 @@
+<div
+  class="reminder-item"
+  [ngClass]="{
+    low: data.priority === 'low',
+    medium: data.priority === 'medium',
+    high: data.priority === 'high'
+  }"
+>
+  <p>{{ data.message }}</p>
+  <small>{{ data.dueDate }}</small>
+</div>

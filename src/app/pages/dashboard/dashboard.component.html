@@ -1,0 +1,43 @@
+<div id="dashboard-page">
+  <div class="page-header">
+    <h2>Dashboard</h2>
+    <p class="page-subtitle">Financial Overview</p>
+  </div>
+
+  <!-- Financial Summary Cards -->
+  <div class="summary-grid">
+    @for(item of summaryData();track item.title){
+    <app-summary-card [data]="item" />
+    }
+  </div>
+
+  <!-- Account Overview -->
+  <div class="dashboard-grid">
+    <app-dashboard-card title="Account Balances">
+      @for (account of accounts(); track account.id) {
+      <app-transaction-item [data]="account"></app-transaction-item>
+      } @empty {
+      <div>No transactions</div>
+      }
+    </app-dashboard-card>
+
+    <app-dashboard-card title="Recent Transactions">
+      @for (transaction of transactions(); track transaction.id) {
+      <app-transaction-item [data]="transaction"></app-transaction-item>
+      } @empty {
+      <p>No transactions found.</p>
+      }
+      <div class="card-footer">
+        <button class="btn btn--outline">View All Transactions</button>
+      </div>
+    </app-dashboard-card>
+
+    <app-dashboard-card title="Upcoming Payments">
+      @for(reminder of reminders(); track reminder.id){
+      <app-reminder [data]="reminder"></app-reminder>
+      } @empty {
+      <p>No upcoming payments.</p>
+      }
+    </app-dashboard-card>
+  </div>
+</div>
